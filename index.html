@@ -1,15 +1,38 @@
 
 <html>
-  <title>
-    First website
-  </title>
-  
+  <title> GitHub</title>
   <body>
+
     <h1>Scrapy records</h1>
 
-<h3> Scrapy formRequest - To retrieve data from post forms </h4>
+ <ul>
+<li> <h3> Scrapy installation - Linux terminal</h3>
 
+<code>
+pip install scrapy
+</code>
 
+<li> <h3> Scrapy simple example - gets title and respective links</h3>
+
+<code>
+import scrapy <br>
+
+class BlogSpider(scrapy.Spider): <br>
+&nbsp    name = 'blogspider' <br>
+&nbsp    start_urls = ['https://blog.scrapinghub.com'] <br>
+<p></p>
+&nbsp def parse(self, response): <br>
+ &nbsp &nbsp &nbsp       for title in response.css('h2.entry-title'):<br>
+  &nbsp &nbsp &nbsp &nbsp  yield {'title': title.css('a ::text').extract_first()} <br>
+<p></p>
+ &nbsp &nbsp &nbsp  next_page = response.css('div.prev-post > a ::attr(href)').extract_first() <br>
+  &nbsp &nbsp &nbsp      if next_page:  <br>
+  &nbsp &nbsp &nbsp &nbsp yield scrapy.Request(response.urljoin(next_page), callback=self.parse)
+</code>
+<h5> example from <a href="https://scrapy.org">here</a></h5>
+
+<li> <h3> Scrapy formRequest - To retrieve data from post forms </h3>
+ 
 <code>
 from scrapy.item import Item, Field<br>
 from scrapy.http import FormRequest<br>
@@ -42,6 +65,8 @@ class DmozSpider(BaseSpider):<br>
   &nbsp &nbsp   print response.status
 </code>
 <h5> example from <a href="www.smipple.net/snippet/fruityworld/scrapy post request">here</a></h5>
+
+    <ul>
 
     </body>
   <style>
