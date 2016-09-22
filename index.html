@@ -31,6 +31,31 @@ class BlogSpider(scrapy.Spider): <br>
 </code>
 <h5> example from <a href="https://scrapy.org">here</a></h5>
 
+<li> <h3> Scrapy next page - access every title links and retrieve specific data</h3>
+
+<code>
+import scrapy <br>
+<p>
+class StackOverflowSpider(scrapy.Spider): <br>
+&nbsp name = 'stackoverflow' <br>
+&nbsp start_urls = ['http://stackoverflow.com/questions?sort=votes'] <br>
+<p>
+&nbsp def parse(self, response): <br>
+&nbsp &nbsp for href in response.css('.question-summary h3 a::attr(href)'): <br>
+&nbsp &nbsp &nbsp full_url = response.urljoin(href.extract()) <br>
+&nbsp &nbsp &nbsp yield scrapy.Request(full_url, callback=self.parse_question) <br>
+<p>
+&nbsp def parse_question(self, response): <br>
+&nbsp &nbsp yield { <br>
+&nbsp &nbsp &nbsp 'title': response.css('h1 a::text').extract()[0], <br>
+&nbsp &nbsp &nbsp 'votes': response.css('.question .vote-count-post::text').extract()[0], <br>
+&nbsp &nbsp &nbsp 'body': response.css('.question .post-text').extract()[0], <br>
+&nbsp &nbsp &nbsp 'tags': response.css('.question .post-tag::text').extract(), <br>
+&nbsp &nbsp &nbsp 'link': response.url,  <br>
+	 &nbsp  &nbsp }
+</code>
+<h5> example from <a href="http://doc.scrapy.org/en/1.0/intro/overview.html">here</a></h5>
+
 <li> <h3> Scrapy formRequest - To retrieve data from post forms </h3>
  
 <code>
@@ -53,13 +78,13 @@ class DmozSpider(BaseSpider):<br>
 &nbsp start_urls = ["http://www.delta.com"]<br>
 <p></p>
 &nbspdef parse(self, response):<br>
-    &nbsp &nbsp yield FormRequest.from_response(response,
-                                         formname='flightSearchForm',
-                                         formdata={'departureCity[0]': 'JFK',
-                                                  'destinationCity[0]': 'SFO',
-                                                   'departureDate[0]': '07.20.2013',
-                                                   'departureDate[1]': '07.28.2013'},
-                                         callback=self.parse1)
+    &nbsp &nbsp yield FormRequest.from_response(response, <br>
+ &nbsp &nbsp &nbsp formname='flightSearchForm',  <br>
+  &nbsp &nbsp &nbsp formdata={'departureCity[0]': 'JFK', <br>
+ &nbsp &nbsp &nbsp 'destinationCity[0]': 'SFO', <br>
+ &nbsp &nbsp &nbsp 'departureDate[0]': '07.20.2013', <br>
+ &nbsp &nbsp &nbsp 'departureDate[1]': '07.28.2013'}, <br>
+ &nbsp &nbsp &nbsp callback=self.parse1)
  <p>
  &nbsp def parse1(self, response):<br>
   &nbsp &nbsp   print response.status
