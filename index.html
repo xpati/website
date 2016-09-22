@@ -5,9 +5,44 @@
   </title>
   
   <body>
-    <h1>This is my first github page</h1>
-  </body>
-  
+    <h1>Scrapy records</h1>
+
+<h3> Scrapy formRequest - To retrieve data from post forms </h4>
+<p> example from: www.smipple.net/snippet/fruityworld/scrapy post request </p>
+
+<code>
+from scrapy.item import Item, Field<br>
+from scrapy.http import FormRequest<br>
+from scrapy.spider import BaseSpider<br>
+
+<p></p>
+
+class DeltaItem(Item):
+&nbsp title = Field()<br>
+&nbsp link = Field()<br>
+&nbsp desc = Field()<br>
+
+<p></p>
+
+class DmozSpider(BaseSpider):<br>
+&nbsp name = "delta"<br>
+&nbsp allowed_domains = ["delta.com"]<br>
+&nbsp start_urls = ["http://www.delta.com"]<br>
+<p></p>
+&nbspdef parse(self, response):<br>
+    &nbsp &nbsp yield FormRequest.from_response(response,
+                                         formname='flightSearchForm',
+                                         formdata={'departureCity[0]': 'JFK',
+                                                  'destinationCity[0]': 'SFO',
+                                                   'departureDate[0]': '07.20.2013',
+                                                   'departureDate[1]': '07.28.2013'},
+                                         callback=self.parse1)
+ <p>
+ &nbsp def parse1(self, response):<br>
+  &nbsp &nbsp   print response.status
+</code>
+
+    </body>
   <style>
 
   </style>
