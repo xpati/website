@@ -27,7 +27,11 @@ const About = () => {
                     className={classes.gridItemWrapper}
                     style={{ flexDirection: "column", alignItems: "space-around" }}
                 >
-                    <Box mb={4}>
+                    <Box mb={4}  style={{
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+}}>
                         <Typography variant="body1">{t('about_desc')}</Typography>
                     </Box>
                     <Skills />

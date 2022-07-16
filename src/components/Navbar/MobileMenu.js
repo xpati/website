@@ -40,7 +40,7 @@ const MobileMenu = ({ open, onClose, onOpen }) => {
                     <ListItem className={classes.btnContainer}>
                         <Button
                             component={MuiLink}
-                            href="/resume.pdf"
+                            href="/website/resume.pdf"
                             variant="outlined"
                             color="primary"
                             underline="none"

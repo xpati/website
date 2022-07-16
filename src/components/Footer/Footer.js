@@ -23,35 +23,37 @@ const Footer = () => {
         {isMobile && <Social mobile />}
         <Typography variant="body2" color="initial">
           © 2022 Sara Tranquada
-       
+          {!isMobile && (
+            <>
+              <IconBtn
+                target="_blank"
+                icon={GitHub}
+                m={1}
+                href="https://github.com/xpati"
+              />
 
-        <IconBtn
-          target="_blank"
-          icon={GitHub}
-          m={1}
-          href="https://github.com/xpati"
-        />
+              <IconBtn
+                target="_blank"
+                icon={Instagram}
+                m={1}
+                href="https://www.instagram.com/xpati89/"
+              />
 
-        <IconBtn
-          target="_blank"
-          icon={Instagram}
-          m={1}
-          href="https://www.instagram.com/xpati89/"
-        />
+              <IconBtn
+                target="_blank"
+                icon={LinkedIn}
+                m={1}
+                href="https://www.linkedin.com/in/sara-tranquada-a51695100/"
+              />
 
-        <IconBtn
-          target="_blank"
-          icon={LinkedIn}
-          m={1}
-          href="https://www.linkedin.com/in/sara-tranquada-a51695100/"
-        />
-
-        <IconBtn
-          target="_blank"
-          icon={Email}
-          m={1}
-          href="mailto:sara.tranquada@gmail.com"
-        />
+              <IconBtn
+                target="_blank"
+                icon={Email}
+                m={1}
+                href="mailto:sara.tranquada@gmail.com"
+              />
+            </>
+          )}
         </Typography>
       </Box>
     </Container>
