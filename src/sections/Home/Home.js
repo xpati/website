@@ -53,10 +53,9 @@ const Home = () => {
           <div
             style={{
               fill: theme.logoColor,
-              width: "auto",
               width: "null",
               resizeMode: "contain",
-              height: "220",
+              height: "auto",
             }}
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 692.13 213.12">
