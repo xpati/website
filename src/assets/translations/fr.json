@@ -1,0 +1,47 @@
+{
+    "language": "pt",
+    "dark_mode": "Modo escuro",
+    
+    "home_welcome": "Olá",
+    "home_i": "Eu sou a",
+    "home_what_i_do": "Eu faço sites incríveis",
+   
+    "home_job": "Desenvolvedor freelancer",
+    "home_location": "Baseado no Funchal, Madeira.",
+  
+    "home_contact_btn": "Entre em contato",
+    "menu_about": "Sobre",
+    "menu_projects": "Projetos",
+    "menu_experiência": "Experiência",
+    "menu_contact": "Contato",
+    "menu_resume": "CV",
+   
+    "about_desc":"Meu nome é Sara Tranquada, tenho um douturamento em Meios Digitais e mestrado em Engenharia da Informática. Sempre tive interesse por tecnologia. Além de programação, tenho interesse por fotografia.",
+    "about_desc2": "Olá",
+   
+    "experience_0_job": "Desenvolvedor web full stack",
+    "experience_0_overview": "Code Hub é um espaço onde os amantes de código estão sediados em Sousse: alguns são freelancers, alguns iniciaram suas startups, outros trabalham como desenvolvedores remotos. é um lugar onde discutimos sobre novas tecnologias, sobre soluções de TI, sobre qualquer coisa em em relação ao Código, também fazemos workshops e oferecemos um espaço de coworking tranquilo para os membros.",
+    "experience_0_duration": "Janeiro de 2021 - Presente",
+    "experience_1_job": "Desenvolvedor web front-end",
+    "experience_1_overview": "Vapoter.tn é um site de comércio eletrônico que vende qualquer coisa relacionada a vapes. infelizmente, a Tunísia tem um sistema restrito e agora é proibido vender produtos vape. então, o site foi fechado.",
+    "experience_1_duration": "Setembro de 2018 - dezembro de 2018",
+   
+    "projects_1_overview": "22 Mulheres contam a sua historia com a Tecnologia",
+    "projects_2_overview": "",
+    "projects_3_overview": "",
+    "projects_4_overview": "",
+    "projects_5_overview": "",
+    "projects_6_overview": "Shadow Cast Studios is an interdisciplinary team of graduate students brought together during the course of the 2012 Game Design class at the University of Madeira.",
+    
+    "projects_1_extended_overview": "",
+    "projects_2_extended_overview": "",
+    "projects_3_extended_overview": "Nesta tese exploramos uma maneira de usar tecnologias digitais que possam gerar reflexão sobre preconceitos de gênero em engenharia. Dois protótipos foram criados para resolver este problema; um que interage com nossa mente consciente, mostrando o número real de estudantes que se candidatam à universidade (Gender by Numbers), e um que interage com nossa mente inconsciente, nos desafiando a resolver um enigma em que a resposta é uma mulher (Riddle Me This QR).",
+    "projects_4_extended_overview": "",
+    "projects_5_extended_overview": "Hospital Hero é um jogo desenvolvido com o objetivo de ajudar as crianças a se familiarizarem com o ambiente hospitalar e os instrumentos/equipamentos que serão submetidos, concentrando sua atenção no feedback positivo, aliviando sua ansiedade e facilitando o trabalho da equipe hospitalar e a sobrecarga dos pais e cuidadores levando a um melhor tratamento e uma melhor experiência.",
+    "projects_6_extended_overview": "O estúdio foi encarregado de projetar e implementar um jogo baseado em computador para mostrar uma plataforma de superfície de projeção dupla semitransparente inovadora, bem como um jogo de tabuleiro com um tema correspondente e uma mecânica central. Esses dois jogos, Umbra: Tree of Life e Umbra: Shadow Warriors foram criados simultaneamente durante um período de 6 semanas.",
+    
+    "contact_full_name": "Nome completo",
+    "contact_email": "Endereço de e-mail",
+    "contact_message":"Messagem",
+    "contact_btn": "Enviar mensagem"
+}
