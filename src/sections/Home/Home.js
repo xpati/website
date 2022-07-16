@@ -5,6 +5,9 @@ import { Link } from "react-scroll";
 import HomeContainer from "../../containers/HomeContainer";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "@material-ui/styles";
+import { LinkedIn, Instagram, GitHub, Email } from "@material-ui/icons";
+import DarkModeSwitcher from "../../components/DarkModeSwitcher";
+import IconBtn from "../../components/IconBtn";
 
 const Home = () => {
   // const { isLoading } = useContext(loaderContext);
@@ -53,6 +56,7 @@ const Home = () => {
             style={{
               fill: theme.logoColor,
               width: "100%",
+              border:"1px solid red"
             }}
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 692.13 213.12">
@@ -163,12 +167,12 @@ const Home = () => {
           >
             {t("home_contact_btn")}
           </Button>
+<br></br>
+          <DarkModeSwitcher />
         </motion.div>
       </div>
     </HomeContainer>
   );
 };
-
-
 
 export default Home;
