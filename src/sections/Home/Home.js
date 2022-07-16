@@ -54,6 +54,9 @@ const Home = () => {
             style={{
               fill: theme.logoColor,
               width: "auto",
+              width: "null",
+              resizeMode: "contain",
+              height: "220",
             }}
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 692.13 213.12">
@@ -164,7 +167,7 @@ const Home = () => {
           >
             {t("home_contact_btn")}
           </Button>
-<br></br>
+          <br></br>
           <DarkModeSwitcher />
         </motion.div>
       </div>
