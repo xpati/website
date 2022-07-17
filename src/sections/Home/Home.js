@@ -14,7 +14,6 @@ const Home = () => {
   const theme = useTheme();
 
   const width = window.innerWidth -100;
-  console.log(width);
   useEffect(() => {
     controls.start({ opacity: 1, y: 0 });
   });
@@ -57,7 +56,6 @@ const Home = () => {
             style={{
               fill: theme.logoColor,
               width: width,
-              border:"1px solid red"
             }}
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 692.13 213.12">
