@@ -18,10 +18,10 @@ const projectList = [
   {
     id: 2,
     title: "Clínicas do Dr Joaquim Vieira",
-    technologies: ["BootStranp 5"],
+    technologies: ["Bootstrap 5"],
     backgroundImage:
       "https://static.vecteezy.com/system/resources/previews/002/375/040/original/modern-white-background-free-vector.jpg",
-    frontImage: "http://clinicajv.pt/assets/img/slide.jpg",
+    frontImage: "https://res.cloudinary.com/dju5xkmvw/image/upload/v1658679493/cjv_cnlqda.jpg",
   },
   {
     id: 3,
@@ -56,7 +56,7 @@ const projectList = [
     backgroundImage:
       "https://cdn.cbeditz.com/cbeditz/preview/black-red-gradient-background-wallpaper-74-11614352798fbqrv1wpuv.jpg",
     frontImage:
-      "http://www.cee.uma.pt/edu/gamedesign/shadowcast/public/images/team/team.jpg",
+    "https://res.cloudinary.com/dju5xkmvw/image/upload/v1658679751/team_ivqydh.jpg",
   },
 ];
 

@@ -148,7 +148,7 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: theme.shadows[8],
     },
     title: {
-        fontSize: "20px",
+        fontSize: "17px",
         fontWeight: 700,
         marginBottom: theme.spacing(1),
         color:theme.palette.primary.contrastText

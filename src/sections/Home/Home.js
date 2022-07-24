@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
-import { Typography, Button } from "@material-ui/core";
+import { Typography, Button, Link as MuiLink } from "@material-ui/core";
 import { motion, useAnimation } from "framer-motion";
 import { Link } from "react-scroll";
 import HomeContainer from "../../containers/HomeContainer";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "@material-ui/styles";
 import DarkModeSwitcher from "../../components/DarkModeSwitcher";
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaMailBulk } from "react-icons/fa";
 
 const Home = () => {
   // const { isLoading } = useContext(loaderContext);
@@ -13,7 +15,7 @@ const Home = () => {
   const { t } = useTranslation();
   const theme = useTheme();
 
-  const width = window.innerWidth -100;
+  const width = window.innerWidth - 100;
   useEffect(() => {
     controls.start({ opacity: 1, y: 0 });
   });
@@ -122,26 +124,21 @@ const Home = () => {
             </svg>
           </div>
         </motion.div>
-        {/* <Typography
-          component={motion.p}
-          animate={controls}
-          custom={2}
-          variant="h2"
-          color="secondary"
-          className={classes.subTitle}
+
+        <Typography variant="body2" color="initial">
+          <FaPhoneAlt style={{ marginRight: "1rem" }} />
+          (+351) 961 161 446
+        </Typography>
+
+        <Typography
+          variant="body2"
+          color="initial"
+          style={{ marginBottom: "1rem" }}
         >
-          {t("home_what_i_do")}
-        </Typography> */}
-        {/* <Typography
-                    component={motion.p}
-                    animate={controls}
-                    custom={3}
-                    variant="body2"
-                    color="initial"
-                    style={{ marginBottom: "0" }}
-                >
-                    {t("home_job")}
-                </Typography> */}
+          <FaMailBulk style={{ marginRight: "1rem" }} />
+          sara.tranquada@gmail.com
+        </Typography>
+
         {/* <Typography
                     component={motion.p}
                     animate={controls}
@@ -165,6 +162,15 @@ const Home = () => {
             size="large"
           >
             {t("home_contact_btn")}
+          </Button>
+          <Button
+            component={MuiLink}
+            href="/website/resume.pdf"
+            variant="outlined"
+            color="primary"
+            underline="none"
+          >
+            {t("menu_resume")}
           </Button>
           <br></br>
           <DarkModeSwitcher />
