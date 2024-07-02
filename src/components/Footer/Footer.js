@@ -22,7 +22,7 @@ const Footer = () => {
       <Box className={classes.footer}>
         {isMobile && <Social mobile />}
         <Typography variant="body2" color="initial">
-          © 2022 Sara Tranquada
+          © 2024 Sara Tranquada
           {!isMobile && (
             <>
               <IconBtn
