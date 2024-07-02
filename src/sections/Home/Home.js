@@ -57,7 +57,7 @@ const Home = () => {
           <div
             style={{
               fill: theme.logoColor,
-              width: width,
+              width: width * 0.75,
             }}
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 692.13 213.12">
