@@ -165,8 +165,9 @@ const Home = () => {
           </Button>
           <Button
             component={MuiLink}
-            href="/website/resume.pdf"
+            href="/website/Sara-Tranquada-CV.pdf"
             variant="outlined"
+            target="_blank"
             color="primary"
             underline="none"
           >
